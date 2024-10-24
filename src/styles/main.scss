@@ -390,6 +390,7 @@ color: rgba(255, 255, 255, 1);
  border-radius: 8px;
  height: 56px;
  width: 280px;
+ border: 2px solid $main-text-color;
 
  @include on-tablet {
   width: 600px;
