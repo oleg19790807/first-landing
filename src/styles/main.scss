@@ -69,9 +69,9 @@ color: $main-text-color;
 scroll-behavior: smooth;
 
 &__body {
-   margin: 0;
+  margin: 0;
     min-width: 320px;
-     &:has(.page__menu:target) {overflow: hidden;}
+  &:has(.page__menu:target) {overflow: hidden;}
      }
 
 &__menu {
@@ -97,12 +97,15 @@ opacity: 0;
   background-image: url(../images/Image\ \(2\).png);
   background-size: cover;
   background-position: center;
+  width: 100%;
 
 &__content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+
+  @include content-padding-inline;
 }
 
 
@@ -180,7 +183,6 @@ background-size: cover;
 background-image: url(../icons/Icon-Phone-call.png);
 cursor: pointer;
 
-
 &:hover::before{
   content: "+1 234 555-55-55";
   position: absolute;
@@ -215,6 +217,7 @@ cursor: pointer;
   font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+  overflow: auto;
 
   &__phone--number {
     color: inherit;
@@ -244,6 +247,10 @@ cursor: pointer;
 
   &__top {
     margin-bottom: 32px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #e5e5e5;
 
     @include on-tablet {
     margin-bottom: 0;
@@ -327,6 +334,11 @@ text-align: left;
 
   &__photo {
     width: 100%;
+
+    &:hover {
+      transform: scale(1.02);
+      transition-duration: 0.3s;
+    }
   }
 
   &__title {
@@ -402,12 +414,8 @@ color: rgba(255, 255, 255, 1);
  background-color: $main-text-color;
  border-radius: 8px;
  height: 56px;
- width: 280px;
  border: 2px solid $main-text-color;
-
- @include on-tablet {
-  width: 600px;
-  }
+ width: 100%;
 
  @include on-decstop {
   width: 324px;
@@ -562,6 +570,11 @@ box-sizing: border-box;
 &:hover {
   border: 1px solid rgba(213, 215, 222, 1);
   cursor: pointer;
+  font-family: 'Space Mono', Arial, Helvetica, sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 19.6px;
+color: rgba(41, 41, 41, 1);
 }
 
 &:active {
@@ -573,6 +586,20 @@ box-sizing: border-box;
    height: 148px;
    width: 100%;
 margin-bottom: 32px;
+
+&:hover {
+  border: 1px solid rgba(213, 215, 222, 1);
+  cursor: pointer;
+  font-family: 'Space Mono', Arial, Helvetica, sans-serif;
+font-size: 14px;
+font-weight: 400;
+line-height: 19.6px;
+color: rgba(41, 41, 41, 1);
+
+&:active {
+  border: 1px solid rgba(41, 41, 41, 1);
+}
+}
 
 @include on-decstop {
   width: 411px;
@@ -636,5 +663,16 @@ font-weight: 400;
 line-height: 22.4px;
 margin: 0;
 text-decoration: none;
-  }
+
+&:hover {
+  color: blue;
 }
+  }
+
+}
+
+.footer {
+  position: sticky;
+  z-index: -1;
+}
+

@@ -85,7 +85,7 @@
             </ul>
           </nav>
           <a href="tel:+1 234 5555-55-55" class="menu__phone--number">+1 234 5555-55-55</a>
-          <a  class="menu__call--to--order">call to order</a>
+          <a href="tel:+1 234 5555-55-55" class="menu__call--to--order">call to order</a>
         </div>
       </div>
 
@@ -102,8 +102,10 @@
           <div class="recomended__products">
 
             <article class="product recomended__product">
-              <img src="../src/images/Image (3)1.png" alt="Phone (1)"
+              <a href="#" class="recomended__product--img">
+                <img src="../src/images/Image (3)1.png" alt="Phone (1)"
                class="product__photo">
+              </a>
               <h3 class="product__title">Phone (1)</h3>
               <p class="product__category">
                 Designed with instinct, to
@@ -117,8 +119,10 @@
             </article>
 
             <article class="product recomended__product">
-              <img src="../src/images/Image (4).png" alt="Ear (2)"
+              <a href="#" class="recomended__product--img">
+                <img src="../src/images/Image (4).png" alt="Ear (2)"
                class="product__photo">
+              </a>
               <h3 class="product__title">Ear (2)</h3>
               <p class="product__category">
                 Perfecting the path from
@@ -130,8 +134,10 @@
             </article>
 
             <article class="product recomended__product">
-              <img src="../src/images/Image (5).png" alt="Ear (stick)"
+              <a href="#" class="recomended__product--img">
+                <img src="../src/images/Image (5).png" alt="Ear (stick)"
                class="product__photo">
+              </a>
               <h3 class="product__title">Ear (stick)</h3>
               <p class="product__category">
                 Tech you can’t feel. Leaving
@@ -223,8 +229,10 @@
 
           <h2 class="section-title contacts__title">Contact us</h2>
 
-          <form action="#" method="post"
-            class="contacts__form">
+          <form action="http://localhost:8080/#"
+            method="post"
+            class="contacts__form"
+            onsubmit="this.reset(); return false;">
 
             <label>
               <input type="text" name="name"
@@ -260,7 +268,7 @@
           <div class="contacts__adrress">
             <div class="contacts__adrress--adrress">
               <p class="contacts__adrress--small">Phone</p>
-              <a href="#" class="contacts__adrress--bold">+1 234 5555-55-55</a>
+              <a href="tel:+1 234 5555-55-55" class="contacts__adrress--bold">+1 234 5555-55-55</a>
             </div>
             <div class="contacts__adrress--adrress">
               <p class="contacts__adrress--small">Email</p>
@@ -268,7 +276,8 @@
             </div>
             <div class="contacts__adrress--adrress">
               <p class="contacts__adrress--small">Address</p>
-              <a href="#" class="contacts__adrress--bold">400 first ave.
+              <a href="http://maps.google.com/?q=400 first ave.suite 700Minneapolis, MN 55401"
+              class="contacts__adrress--bold" target="_blank">400 first ave.
                 <br>suite 700
                 <br>
                   Minneapolis, MN 55401
