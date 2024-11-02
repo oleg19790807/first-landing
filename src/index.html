@@ -107,10 +107,12 @@
                class="product__photo">
               </a>
               <h3 class="product__title">Phone (1)</h3>
-              <p class="product__category">
+              <p class="product__category product__category--1">
                 Designed with instinct, to
                 bring joy back to the
-                everyday. Through the Glyph
+                everyday.
+              </p>
+              <p class="product__category">Through the Glyph
                 Interface, a perfected OS
                 and exceptional dual camera.
                 All startlingly fast.
@@ -153,7 +155,7 @@
 
         <section class="categories container" id="store" >
 
-          <h2 class="section-title">Browse Nothing products by category</h2>
+          <h2 class="section-title categories__title">Browse Nothing products by category</h2>
 
           <div class="categories__wrapper">
 
@@ -225,63 +227,60 @@
         </section>
 
 
-        <section class="contacts  container" id="cart(0)">
+        <section class="contacts container" id="cart(0)">
 
           <h2 class="section-title contacts__title">Contact us</h2>
 
-          <form action="http://localhost:8080/#"
-            method="post"
-            class="contacts__form"
-            onsubmit="this.reset(); return false;">
+          <div class="contacts__wrap">
 
-            <label>
+
+            <form action="http://localhost:8080/#"
+                  method="post"
+                  class="contacts__form"
+                  onsubmit="this.reset(); return false;">
               <input type="text" name="name"
-               placeholder="Name"
-               class="contacts__input"
-               required
-               >
-            </label>
-
-            <label>
+                     placeholder="Name"
+                     class="contacts__input"
+                     autocomplete="on"
+                     required
+                     >
               <input type="text" name="email"
-              placeholder="Email"
-              class="contacts__input"
-              required
-              >
-            </label>
-
-            <label>
-              <input name="Message"
-                placeholder="Message"
-                class="contacts__input contacts__input--textarea"
-                required
-                >
-              </input>
-            </label>
-
-            <label>
+                    placeholder="Email"
+                    class="contacts__input"
+                    autocomplete="on"
+                    required
+                    >
+              <textarea
+                     placeholder="Message"
+                     name="Message"
+                      class="contacts__input contacts__input--textarea"
+                      autocomplete="on"
+                      required
+                      >
+              </textarea>
               <button type="reset" class="contacts__input--button">Send</button>
-            </label>
+            </form>
 
-          </form>
 
-          <div class="contacts__adrress">
-            <div class="contacts__adrress--adrress">
-              <p class="contacts__adrress--small">Phone</p>
-              <a href="tel:+1 234 5555-55-55" class="contacts__adrress--bold">+1 234 5555-55-55</a>
-            </div>
-            <div class="contacts__adrress--adrress">
-              <p class="contacts__adrress--small">Email</p>
-              <a href="#" class="contacts__adrress--bold">hello@nothing.com</a>
-            </div>
-            <div class="contacts__adrress--adrress">
-              <p class="contacts__adrress--small">Address</p>
-              <a href="http://maps.google.com/?q=400 first ave.suite 700Minneapolis, MN 55401"
-              class="contacts__adrress--bold" target="_blank">400 first ave.
-                <br>suite 700
-                <br>
-                  Minneapolis, MN 55401
-              </a>
+            <div class="contacts__adrress">
+              <div class="contacts__adrress--adrress">
+                <p class="contacts__adrress--small">Phone</p>
+                <a href="tel:+1 234 5555-55-55" class="contacts__adrress--bold">+1 234 5555-55-55</a>
+              </div>
+              <div class="contacts__adrress--adrress">
+                <p class="contacts__adrress--small">Email</p>
+                <a href="mailto:hello@nothing.com" class="contacts__adrress--bold">hello@nothing.com</a>
+              </div>
+              <div class="contacts__adrress">
+                <p class="contacts__adrress--small">Address</p>
+                <a href="http://maps.google.com/?q=400 first ave.suite 700Minneapolis, MN 55401"
+                class="contacts__adrress--bold" target="_blank">
+                400 first ave.
+                  <br>suite 700
+                  <br>
+                    Minneapolis, MN 55401
+                </a>
+              </div>
             </div>
           </div>
 
@@ -290,7 +289,6 @@
       </div>
 
     </main>
-
 
     <footer class="footer"></footer>
 
